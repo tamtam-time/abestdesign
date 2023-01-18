@@ -1,6 +1,6 @@
 class DesignsController < ApplicationController
   before_action :authenticate_user!, only:[:edit, :new, :destroy]
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
   before_action :set_design, only: [:show, :edit]
 
   def index
@@ -22,7 +22,7 @@ class DesignsController < ApplicationController
   end
 
   def show
-   
+
   end
 
   def destroy
@@ -49,8 +49,11 @@ class DesignsController < ApplicationController
   end
 
   def search
-    @designs = Design.search(params[:keyword]).order("created_at DESC")
+    @post_form = Design.search(params[:keyword]).order("created_at DESC")
   end
+  
+
+
 
   private
 

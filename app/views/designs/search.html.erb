@@ -4,8 +4,16 @@
   <%= form.submit "検索", class: "search-btn" %>
 <% end %>
 <div class="card__wrapper">
-  <% @designs.each do |design| %>
+  <% @post_form.each do |design| %>
     <%= render partial: "design", locals: { design: design } %>
   <% end %>
 </div>
+
+<div class="card__wrapper">
+  <% @post_form.each do |design| %>
+    <%= render partial: "tag", locals: { post_form: @post_form } %>
+  <% end %>
+</div>
+
+
 </div>
