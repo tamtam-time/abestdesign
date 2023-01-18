@@ -1,0 +1,53 @@
+<main class="main">
+  <div class="inner">
+    <div class="prototype__wrapper">
+      <p class="prototype__hedding">
+        <%= @design.title %>
+      </p>
+      <% if user_signed_in? && current_user.id == @design.user_id %>
+      <div class="prototype__detail"><br>
+          <p class="detail__title">ファイル場所</p>
+          <p class="detail__message">
+            <%= @design.file_name %>
+          </p>
+        </div>
+        <div class="prototype__manage">
+          <%# link_to "編集する", edit_design_path, method: :get, class: :prototype__btn %>
+          <%= link_to "削除する", design_path, method: :delete, class: :prototype__btn %>
+        </div>
+      <% end %>
+
+      <span class="tag_style"><%= @post_form.tags.first&.tag_name %></span>
+
+      <div class="prototype__image">
+        <%= image_tag @design.image %>
+      </div>
+      <div class="prototype__body">
+        
+        <div class="prototype__detail">
+          <p class="detail__title">以下をクリックしてコピーしてください。</p>
+          <u><div class="copy_btn" data-clipboard-text="<%= @design.title %>"><%= @design.title %></div></u>
+          <a href="mailto:it@abest.xsrv.jp?subject=製作依頼&amp;body=以下をご記入ください。%0d%0a*********************%0d%0a内容%0d%0aサイズ%0d%0a納期%0d%0a参考ファイル名（コピーしたファイル名をペーストしてください）">
+          ご依頼はこちら</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- ↓クリップボード操作のために使用するjsを読み込む　( https://clipboardjs.com/ ) -->
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
+ 
+<script>
+var clipboard = new Clipboard('.copy_btn');    //clipboard.min.jsが動作する要素をクラス名で指定
+ 
+//クリックしたときの挙動
+$(function(){
+    $('.copy_btn').click(function(){
+        $(this).addClass('copied');    //ボタンの色などを変更するためにクラスを追加
+        $(this).text('コピーしました');    //テキストの書き換え
+    });
+});
+</script>

@@ -1,0 +1,25 @@
+<%= form_with model: @post_form, url: designs_path, method: :post, scope: :post_form, local: true do |f| %>
+
+  <div class="field">
+    <%= f.label :title, "タイトル" %><br />
+    <%= f.text_field :title, id:"design_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :file_name, "ファイルの場所" %><br />
+    <%= f.text_area :file_name, class: :form__text, id:"design_file_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "プロトタイプの画像" %><br />
+    <%= f.file_field :image, id:"design_image" %>
+  </div>
+
+ <div class="tag-field">
+    <%= f.text_field :tag_name, placeholder: 'add tags' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn %>
+  </div>
+<% end %>
