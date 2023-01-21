@@ -96,7 +96,7 @@ a {
 }
 
 .actions{
-  margin-bottom: 40px;
+  margin: 40px 0;
 }
 
 .form__btn{
@@ -347,10 +347,44 @@ a {
 }
 
 .tag_style{
-  display: block;
   margin: 30px auto;
   background: #509436;
   color: #fff;
   padding: 10px;
   text-align: center;
+  border-radius: 10px;
+}
+
+.tag-field{
+  margin-top: 20px;
+}
+
+.copy_btn{
+  border: solid 1px #333;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.4);
+  margin-top: 20px;
+}
+
+.mail_btn{
+  background: #509436;
+  color: #fff;
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.4);
+  margin-top: 20px;
+  padding: 10px 20px;
+  margin: 20px auto 50px auto;
+}
+
+.tag-search{
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.tag_ex{
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.tag_ex span{
+  display: inline-block;
 }

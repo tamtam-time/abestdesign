@@ -1,10 +1,11 @@
 class DesignsController < ApplicationController
   before_action :authenticate_user!, only:[:edit, :new, :destroy]
   before_action :move_to_index, except: [:index, :show]
-  before_action :set_design, only: [:show, :edit]
+  before_action :set_design, only: [:show, :edit, :update, :destroy]
 
   def index
     @designs = Design.includes(:user).order("created_at DESC")
+    @designs = params[:tag_id].present? ? Tag.find(params[:tag_id]).designs : Design.all.order("created_at DESC")
   end
 
   def new
@@ -51,6 +52,8 @@ class DesignsController < ApplicationController
   def search
     @designs = Design.search(params[:keyword]).order("created_at DESC")
   end
+
+
 
   private
 

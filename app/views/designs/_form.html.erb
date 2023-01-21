@@ -16,10 +16,32 @@
   </div>
 
  <div class="tag-field">
-    <%= f.text_field :tag_name, placeholder: 'add tags' %>
+    <%= f.text_field :tag_name, placeholder: 'タグ' %>
   </div>
+
+<div class="tag_ex"><p>※タグ例</p>
+ <span class="copy_btn" data-clipboard-text="ビジネス向け">ビジネス向け</span>
+ <span class="copy_btn" data-clipboard-text="ファミリー向け">ファミリー向け</span>
+ <span class="copy_btn" data-clipboard-text="高級感">高級感</span>
+ <span class="copy_btn" data-clipboard-text="イラスト">イラスト</span>
+ <span class="copy_btn" data-clipboard-text="綺麗め">綺麗め</span>
+ <span class="copy_btn" data-clipboard-text="インパクト大">インパクト大</span>
+ <span class="copy_btn" data-clipboard-text="かわいい系">かわいい系</span>
+ </div>
 
   <div class="actions">
     <%= f.submit "保存する", class: :form__btn %>
   </div>
 <% end %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- ↓クリップボード操作のために使用するjsを読み込む　( https://clipboardjs.com/ ) -->
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
+<script>
+$(function(){
+    $('.copy_btn').click(function(){
+        $(this).addClass('copied');    //ボタンの色などを変更するためにクラスを追加
+        $(this).text('コピーしました');    //テキストの書き換え
+    });
+});
+</script>
