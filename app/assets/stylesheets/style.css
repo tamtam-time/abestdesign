@@ -134,11 +134,11 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  min-height: calc(100vh - 161px);
+  align-items: top;
+  min-height: calc(100vh - 300px);
 }
 .card {
-  width: calc((100% - 50px) / 3);
+  width: calc((100% - 50px) / 5);
   margin-bottom: 40px;
 }
 .card__img {
@@ -348,11 +348,10 @@ a {
 
 .tag_style{
   margin: 30px auto;
-  background: #509436;
+  background: #184b23;
   color: #fff;
-  padding: 10px;
+  padding: 5px 10px;
   text-align: center;
-  border-radius: 10px;
 }
 
 .tag-field{
