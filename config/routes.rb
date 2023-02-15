@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :users, only: :show, new
+  resources :users, only: :show
   post '/designs/new', to: 'designs#create'
 end
 
