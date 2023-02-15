@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     end
   end
   resources :users
-
+  root to: 'designs#index'
+  post '/designs/new', to: 'designs#create'
 end
 
