@@ -7,8 +7,6 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :users
-  root to: 'designs#index'
-  post '/designs/new', to: 'designs#create'
+  resources :users, only: :show
 end
 
