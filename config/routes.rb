@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     end
   end
   resources :users
-  post '/designs/new', to: 'designs#create'
+
 end
 
