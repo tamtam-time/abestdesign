@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: root_path
+  root to: 'designs#index'
   resources :users
 
   resources :designs do
