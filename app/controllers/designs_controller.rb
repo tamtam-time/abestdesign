@@ -1,5 +1,5 @@
 class DesignsController < ApplicationController
-  before_action :authenticate_user!, only:[:edit, :new, :destroy]
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :move_to_index, except: [:index, :show]
   before_action :set_design, only: [:show, :edit, :update, :destroy]
 
@@ -67,7 +67,7 @@ class DesignsController < ApplicationController
 
   def move_to_index
     unless user_signed_in?
-      redirect_to action: :root_path
+      redirect_to action: :index
     end
   end
 
