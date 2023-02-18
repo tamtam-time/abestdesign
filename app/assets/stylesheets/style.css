@@ -348,11 +348,10 @@ a {
 
 .tag_style{
   margin: 30px auto;
-  background: #509436;
+  background: #184b23;
   color: #fff;
-  padding: 10px;
+  padding: 5px 10px;
   text-align: center;
-  border-radius: 10px;
 }
 
 .tag-field{
