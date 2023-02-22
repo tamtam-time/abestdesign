@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 2023_01_12_025833) do
   end
 
   create_table "designs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.text "file_name"
+    t.string "title", null: false
+    t.text "file_name", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
