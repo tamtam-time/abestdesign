@@ -8,7 +8,7 @@ development:
   username: root
   password: 
   host: localhost
-  database: abestdesign_development
+  database: postgres://abest_design_user:r6p4CvYa671RTypwz9rl8lDbGloC0RqZ@dpg-cfm6ut2rrk07m3s7evug-a/abest_design
 
 test:
   <<: *default
@@ -16,7 +16,7 @@ test:
   username: root
   password: 
   host: localhost
-  database: abestdesign_test
+  database: postgres://abest_design_user:r6p4CvYa671RTypwz9rl8lDbGloC0RqZ@dpg-cfm6ut2rrk07m3s7evug-a/abest_design
 
 production:
   <<: *default
