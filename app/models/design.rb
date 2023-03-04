@@ -9,8 +9,11 @@ class Design < ApplicationRecord
   validates :image, presence: true
 
   def self.search(search)
-    return Design.all unless search
-    Design.where(['title LIKE(?)', "%#{search}%"])
+    if search != ""
+      Design.where('title LIKE(?)', "%#{search}%")
+    else
+      Design.all
+    end
   end
 
 
