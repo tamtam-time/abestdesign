@@ -11,7 +11,7 @@
 
     <div class="card__wrapper">
       <% @designs.each do |design| %>
-        <%= render partial: "design", locals: { design: designs } %>
+        <%= render 'designs/search', post: post %>
       <% end %>
     </div>
   </div>
