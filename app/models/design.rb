@@ -10,7 +10,7 @@ class Design < ApplicationRecord
 
   def self.search(search)
     return Design.all unless search
-    Design.where(['title LIKE(?)', "%#{search}%", "%#{search}%"])
+    Design.where(['title LIKE(?)', "%#{search}%"])
   end
 
 
