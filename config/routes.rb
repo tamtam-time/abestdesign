@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :designs do
     collection do
       get  '/designs/search',  to: 'designs#search'
-      post  '/designs/search',  to: 'designs#search'
     end
   end
 
