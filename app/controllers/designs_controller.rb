@@ -50,8 +50,7 @@ class DesignsController < ApplicationController
   end
 
   def search
-    @keyword = params[:design][:search] if params[:design]
-    @designs_all = Design.search(@keyword)
+    @designs = Design.search(params[:keyword]).order("created_at DESC")
   end
 
 
