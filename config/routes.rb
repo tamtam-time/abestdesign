@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :designs
   resources :designs do
     collection do
-      get 'designs#search'
+      get '/designs/search', to: 'designs#search'
     end
   end
 
