@@ -9,6 +9,6 @@
 
     <div class="card__wrapper">
       <% @designs.each do |design| %>
-        <%= render partial: "design",  design: design %>
+        <%= render  'designs/design', design: design %>
       <% end %>
     </div>
