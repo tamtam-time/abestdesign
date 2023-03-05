@@ -12,7 +12,6 @@ class Design < ApplicationRecord
     return Design.all unless search
     Design.where(['title LIKE(?)', "%#{search}%"])
   end
-  end
 
 
 
