@@ -9,16 +9,10 @@ class Design < ApplicationRecord
   validates :image, presence: true
 
   def self.search(search)
-    if search == "perfect_match"
-      @design = Design.where("title LIKE?","#{keyword}")
-    elsif search == "forward_match"
-      @design = Design.where("title LIKE?","#{keyword}%")
-    elsif search == "backward_match"
-      @design = Design.where("title LIKE?","%#{keyword}")
-    elsif search == "partial_match"
-      @design = Design.where("title LIKE?","%#{keyword}%")
+    if search != ""
+      Design.where('title LIKE(?)', "%#{search}%")
     else
-      @design = Design.all
+      Design.all
     end
   end
 

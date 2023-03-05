@@ -2,7 +2,7 @@
   <div class="inner">
 
     <%= form_with(url: search_designs_path, local:true, scope: :post, class:"search-form") do |form| %>
-      <%= form.text_field :keyword, placeholder:"検索する", class:"search-input " %>
+      <%= form.text_field :search, placeholder:"検索する", class:"search-input " %>
       <%= form.submit "検索",class: "search-btn" %>
     <% end %>
 
