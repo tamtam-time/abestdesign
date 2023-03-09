@@ -39,7 +39,7 @@ class DesignsController < ApplicationController
     design.update(design_params)
       redirect_to design_path(design.id)
     else
-      redirect_to request.referer
+      render 'edit'
     end
   end
 
