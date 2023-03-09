@@ -35,12 +35,7 @@ class DesignsController < ApplicationController
 
   def update
     design = Design.find(params[:id])
-    if
     design.update(design_params)
-      redirect_to design_path(design.id)
-    else
-      render 'edit'
-    end
   end
 
   def edit
