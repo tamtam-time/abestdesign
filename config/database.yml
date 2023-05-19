@@ -4,21 +4,23 @@ default: &default
 
 development:
   <<: *default
-  adapter: mysql2
+  adapter: mysql5.7
   username: root
-  password: 
+  password: EeDn9TB94hIm
   host: localhost
-  database: postgres://abest_design_user:r6p4CvYa671RTypwz9rl8lDbGloC0RqZ@dpg-cfm6ut2rrk07m3s7evug-a/abest_design
+  database: http://abest.xsrv.jp/doc
 
 test:
   <<: *default
-  adapter: mysql2
+  adapter: mysql5.7
   username: root
-  password: 
+  password: EeDn9TB94hIm
   host: localhost
-  database: postgres://abest_design_user:r6p4CvYa671RTypwz9rl8lDbGloC0RqZ@dpg-cfm6ut2rrk07m3s7evug-a/abest_design
+  database: http://abest.xsrv.jp/doc
 
 production:
   <<: *default
   adapter: postgresql
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['http://abest.xsrv.jp/doc'] %>
+
+
