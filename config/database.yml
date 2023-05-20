@@ -4,19 +4,19 @@ default: &default
 
 development:
   <<: *default
-  adapter: mysql2
+  adapter: mysql5.7.x
   username: root
   password: 
   host: localhost
-  database: postgres://abest_design_user:r6p4CvYa671RTypwz9rl8lDbGloC0RqZ@dpg-cfm6ut2rrk07m3s7evug-a/abest_design
+  database: mysql8001.xserver.jp
 
 test:
   <<: *default
-  adapter: mysql2
+  adapter: mysql5.7.x
   username: root
   password: 
   host: localhost
-  database: postgres://abest_design_user:r6p4CvYa671RTypwz9rl8lDbGloC0RqZ@dpg-cfm6ut2rrk07m3s7evug-a/abest_design
+  database: mysql8001.xserver.jp
 
 production:
   <<: *default
