@@ -7,16 +7,16 @@ development:
   adapter: mysql5.7
   username: root
   password: EeDn9TB94hIm
-  host: localhost
-  database: mysql8001.xserver.jp
+  host: mysql8001.xserver.jp
+  database: abest_design
 
 test:
   <<: *default
   adapter: mysql5.7
   username: root
   password: EeDn9TB94hIm
-  host: localhost
-  database: mysql8001.xserver.jp
+  host: mysql8001.xserver.jp
+  database: abest_design
 
 production:
   <<: *default
