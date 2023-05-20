@@ -8,7 +8,7 @@ development:
   username: root
   password: EeDn9TB94hIm
   host: localhost
-  database: http://abest.xsrv.jp/doc
+  database: mysql8001.xserver.jp
 
 test:
   <<: *default
@@ -16,11 +16,11 @@ test:
   username: root
   password: EeDn9TB94hIm
   host: localhost
-  database: http://abest.xsrv.jp/doc
+  database: mysql8001.xserver.jp
 
 production:
   <<: *default
   adapter: postgresql
-  url: <%= ENV['http://abest.xsrv.jp/doc'] %>
+  url: <%= ENV['mysql8001.xserver.jp'] %>
 
 
